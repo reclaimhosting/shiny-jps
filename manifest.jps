@@ -5,9 +5,13 @@ homepage: https://rstudio.com/products/shiny/shiny-server/
 baseUrl: https://raw.githubusercontent.com/reclaimhosting/shiny-jps/master
 logo: images/rshiny_logo.png
 
-
 description: 
   text: Publish your R Shiny Web Apps with your own Shiny Server. Shiny is an R package that makes it easy to build interactive web apps straight from R. With your own Shiny Server hosted on Reclaim Cloud you can publish your Shiny apps with ease.
+  
+categories:
+- apps/popular
+- apps/dev-tools
+- apps/e-learning
 
 nodes:
   nodeType: dockerengine
