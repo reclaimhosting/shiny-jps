@@ -2,12 +2,12 @@ type: install
 id: shiny
 name: Shiny Server
 homepage: https://rstudio.com/products/shiny/shiny-server/
-baseUrl: https://raw.githubusercontent.com/timmmmyboy/shiny-jps/master
+baseUrl: https://raw.githubusercontent.com/reclaimhosting/shiny-jps/master
 logo: images/rshiny_logo.png
 
 
 description: 
-  text: Run your R applications with your own shiny server
+  text: Publish your R Shiny Web Apps with your own Shiny Server. Shiny is an R package that makes it easy to build interactive web apps straight from R. With your own Shiny Server hosted on Reclaim Cloud you can publish your Shiny apps with ease.
 
 nodes:
   nodeType: dockerengine
