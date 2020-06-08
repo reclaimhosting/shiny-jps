@@ -2,7 +2,9 @@ type: install
 id: shiny
 name: Shiny Server
 homepage: https://rstudio.com/products/shiny/shiny-server/
+baseUrl: https://raw.githubusercontent.com/timmmmyboy/shiny-jps/master
 logo: images/rshiny_logo.png
+
 
 description: 
   text: Run your R applications with your own shiny server
