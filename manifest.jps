@@ -1,0 +1,45 @@
+type: install
+id: shiny
+name: Shiny Server
+homepage: https://rstudio.com/products/shiny/shiny-server/
+logo: images/rshiny_logo.png
+
+description: 
+  text: Run your R applications with your own shiny server
+
+nodes:
+  nodeType: dockerengine
+  nodeGroup: cp
+  cloudlets: 16
+  extip: false
+  displayName: Shiny Server
+
+onInstall: setup
+
+actions:
+  setup:
+    cmd[cp]: |-
+      git clone https://github.com/rocker-org/shiny.git && cd shiny;
+      mv mountpoints/apps /srv/shiny-apps;
+      docker run -d -p 80:3838 \
+      	--name shiny \
+    	-v /srv/shiny-apps/:/srv/shiny-server/ \
+    	-v /srv/shiny-logs/:/var/log/shiny-server/ \
+    	rocker/shiny
+
+      #Checking of container is up and running 
+      until [ "`/usr/bin/docker inspect -f {{.State.Running}} shiny`"=="true" ]; do
+        sleep 1
+        print '.'
+      done;
+
+      echo OK
+
+ssl: true
+skipNodeEmails: true
+    
+success: | 
+  **Shiny Server**: [https://${env.domain}/](https://${env.domain}/)  
+  **Example App**: [https://${env.domain}/example-app](https://${env.domain}/example-app)
+  
+  Upload your own content to **/srv/shiny-apps** to get started publishing your own Shiny apps.
