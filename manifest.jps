@@ -24,10 +24,10 @@ actions:
       git clone https://github.com/rocker-org/shiny.git && cd shiny;
       mv mountpoints/apps /srv/shiny-apps;
       docker run -d -p 80:3838 \
-      	--name shiny \
-    	-v /srv/shiny-apps/:/srv/shiny-server/ \
-    	-v /srv/shiny-logs/:/var/log/shiny-server/ \
-    	rocker/shiny
+      --name shiny \
+      -v /srv/shiny-apps/:/srv/shiny-server/ \
+      -v /srv/shiny-logs/:/var/log/shiny-server/ \
+      rocker/shiny
 
       #Checking of container is up and running 
       until [ "`/usr/bin/docker inspect -f {{.State.Running}} shiny`"=="true" ]; do
