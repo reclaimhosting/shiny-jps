@@ -31,6 +31,7 @@ actions:
       --name shiny \
       -v /srv/shiny-apps/:/srv/shiny-server/ \
       -v /srv/shiny-logs/:/var/log/shiny-server/ \
+      --restart=always \
       rocker/shiny
 
       #Checking of container is up and running 
