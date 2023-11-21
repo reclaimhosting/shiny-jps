@@ -38,6 +38,6 @@ skipNodeEmails: true
     
 success: | 
   **Shiny Server**: [https://${env.domain}/](https://${env.domain}/)  
-  **Example App**: [https://${env.domain}/example-app](https://${env.domain}/example-app)
+  **Example App**: [https://${env.domain}/sample-apps](https://${env.domain}/sample-apps)
   
   Upload your own content to **/root/shiny-server/apps** to get started publishing your own Shiny apps.
